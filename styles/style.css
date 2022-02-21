@@ -1,0 +1,673 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Kumbh Sans;
+}
+
+button {
+  font-family: Kumbh Sans;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 150px auto 150px;
+      grid-template-columns: 150px auto 150px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #b6bcc8;
+}
+
+header .logo {
+  cursor: pointer;
+}
+
+header .menu {
+  display: none;
+}
+
+header .user-picture {
+  border: 2px solid transparent;
+  border-radius: 50px;
+}
+
+header .user-picture:hover {
+  border: 2px solid #ff7d1a;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-width: 350px;
+  margin-left: 10px;
+  width: 60%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #b6bcc8;
+  display: inline-block;
+  padding: 30px 0;
+  border-bottom: 3px solid transparent;
+  text-align: center;
+}
+
+nav a:hover {
+  color: #68707d;
+  border-bottom: 3px solid #ff7d1a;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+}
+
+.user .user-picture {
+  width: 50px;
+}
+
+.orange {
+  width: 100%;
+  min-width: 150px;
+  background-color: #ff7d1a;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+.orange:active {
+  background-color: #ffede0;
+}
+
+.car {
+  position: relative;
+}
+
+.car .car-number {
+  background-color: #ff7d1a;
+  text-align: center;
+  position: absolute;
+  top: -8px;
+  right: -3px;
+  font-size: 0.7rem;
+  border-radius: 10px;
+  color: white;
+  padding: 0 5px;
+}
+
+.car .car-number.hide {
+  display: none;
+}
+
+.car-info {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  right: -150px;
+  top: 50px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+
+.car-info.active {
+  display: inline-block;
+}
+
+.car-info > *:not(button) {
+  padding: 0 20px;
+}
+
+.car-info h2 {
+  font-size: 1rem;
+  margin: 0px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #b6bcc8;
+}
+
+.car-info p {
+  display: none;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.car-info .orange {
+  width: calc(100% - 40px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  left: 20px;
+  right: 20px;
+  margin: 0 0 20px 0;
+}
+
+.car-info .car-products .car-product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 7fr 1fr;
+      grid-template-columns: 2fr 7fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 15px 0;
+}
+
+.car-info .car-products .car-product .car-product-icon {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.car-info .car-products .car-product .car-product-delete {
+  text-align: right;
+  cursor: pointer;
+}
+
+.car-info .car-products.empty {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.car-info.empty p {
+  display: block;
+}
+
+.car-info.empty button {
+  display: none;
+}
+
+.car-info.mobile {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 300px;
+  right: 10px;
+  left: 10px;
+  top: 70px;
+  width: calc(100% - 20px);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.car-info.mobile.active {
+  display: inline-block;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-top: 30px;
+}
+
+.product-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.product-img .first img {
+  width: 100%;
+}
+
+.product-img .carrusel {
+  margin-top: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 85px;
+      grid-template-rows: 85px;
+  gap: 7%;
+}
+
+.product-img .carrusel .carrusel-img {
+  outline: 4px solid transparent;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  cursor: pointer;
+  background-position: center;
+  height: 70px;
+}
+
+.product-img .carrusel .carrusel-img:hover {
+  -webkit-filter: brightness(120%) contrast(80%);
+          filter: brightness(120%) contrast(80%);
+}
+
+.product-img .carrusel .carrusel-img.selected {
+  outline: 4px solid #ff7d1a;
+  -webkit-filter: brightness(120%) contrast(80%);
+          filter: brightness(120%) contrast(80%);
+}
+
+.product-img .carrusel .carrusel-img img {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.product-img img {
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.product-img .gallery-arrows {
+  display: none;
+}
+
+.product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-info .product-info-company {
+  color: #ff7d1a;
+  text-transform: uppercase;
+}
+
+.product-info .product-info-title {
+  font-size: 3rem;
+}
+
+.product-info .product-info-description {
+  line-height: 1.5rem;
+}
+
+.product-info .product-info-price {
+  font-size: 2rem;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.product-info .product-info-discount {
+  color: #ff7d1a;
+  background-color: #ffede0;
+  display: inline-block;
+  padding: 4px;
+  vertical-align: middle;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.product-info .product-info-old-price {
+  color: #b6bcc8;
+  font-weight: bold;
+  text-decoration: line-through;
+  margin-top: 8px;
+}
+
+.product-info .product-info-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.product-info .quantity {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.product-info .quantity .quantity-item {
+  display: inline-block;
+  background-color: #eff3fb;
+  padding: 10px;
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.product-info .quantity .quantity-item.plus {
+  border-radius: 0 10px 10px 0;
+}
+
+.product-info .quantity .quantity-item.less {
+  border-radius: 10px 0 0 10px;
+}
+
+.product-info .quantity .quantity-item.btn {
+  color: #ff7d1a;
+  cursor: pointer;
+}
+
+.product-info-btns-checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-info-btns-checkout img {
+  -webkit-filter: brightness(100);
+          filter: brightness(100);
+  padding: 0 10px;
+}
+
+.gallery {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.gallery .gallery-carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 500px;
+  height: 100%;
+  margin: auto;
+}
+
+.gallery .gallery-close {
+  text-align: right;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.gallery .gallery-close img {
+  cursor: pointer;
+  -webkit-filter: invert(100%) sepia(10%) saturate(1000%);
+          filter: invert(100%) sepia(10%) saturate(1000%);
+}
+
+.gallery-arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  width: 112%;
+  height: 75px;
+  top: 0;
+  bottom: 0;
+  left: -6%;
+  margin: auto;
+}
+
+.gallery-arrows .gallery-arrow {
+  width: 35px;
+  font-weight: bold;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  display: flex;
+  border-radius: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.gallery-arrows .gallery-arrow-orange {
+  display: none;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer .attribution a {
+  color: #3e52a3;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 0 5%;
+  }
+  main {
+    gap: 40px;
+  }
+  .product-info .product-info-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    width: 100%;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery .gallery-carrusel {
+    width: 450px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    margin: 0;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 10px;
+    border: 0;
+  }
+  header .menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+  header .user {
+    width: 120px;
+  }
+  nav {
+    display: none;
+  }
+  main {
+    margin: 0;
+    gap: 20px;
+  }
+  .product-img .carrusel {
+    display: none;
+  }
+  .product-img img {
+    border-radius: 0;
+  }
+  .product-img .gallery-arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .product-info {
+    margin: 0 15px;
+    display: block;
+  }
+  .product-info .product-info-btns {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .product-info .quantity {
+    width: 100%;
+  }
+  .product-info .quantity .quantity-item {
+    width: 100%;
+  }
+  .product-info .product-info-pd {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: inline;
+  }
+  .product-info .product-info-old-price {
+    display: inline;
+    float: right;
+  }
+  .product-info .product-info-title {
+    margin: 10px 0;
+  }
+  .gallery-arrows {
+    width: 90%;
+    left: 0;
+    right: 0;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+  .gallery-arrows .gallery-arrow {
+    padding: 10px;
+    width: 18px;
+  }
+  .car .car-info {
+    left: 10px;
+    right: 10px;
+    top: 70px;
+    width: calc(100% - 20px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .car-info.mobile {
+    display: none;
+    border-radius: 20px;
+  }
+  .car-info.mobile.active {
+    display: inline-block;
+  }
+  .gallery {
+    display: none !important;
+  }
+  .menu-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100vh;
+  }
+  .menu-mobile .menu-mobile-background {
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding: 20px 0 0 20px;
+  }
+  .menu-mobile .menu-mobile-background .menu-mobile-close {
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  .menu-mobile .menu-mobile-background .menu-mobile-item {
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #68707d;
+  }
+  .menu-mobile .menu-mobile-background .menu-mobile-item:hover {
+    color: black;
+  }
+}
+/*# sourceMappingURL=style.css.map */

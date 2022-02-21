@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="car-info mobile" id="car-mobile">
+         <h2>Car</h2>
+         <p>Your cart is empty</p>
+         <div class="car-products">
+        </div>
+           <button  class="car-products-checkout orange">Checkout</button>
+  </div>
+
+
+  <div class="container">
+    <header>
+      <img class="menu" src="./images/icon-menu.svg" alt="" >
+      <img src="./images/logo.svg" alt="logo" class="logo">
+      <nav>
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="user">
+           <div class="car">
+                <a href="#"><img src="./images/icon-cart.svg" alt="" class="car-ico"></a>
+                <div class="car-number hide">0</div>
+                <div class="car-info" id="car-desktop">
+                     <h2>Cart</h2>
+                      <p>Your cart is empty</p>
+         
+                     <div class="car-products">
+                    </div>
+                       <button  class="car-products-checkout orange">Checkout</button>
+                   </div>
+           </div>
+        <a href="#"><img src="./images/image-avatar.png" alt="" class="user-picture"> </a>
+      </div>
+    </header>
+
+    <main>
+         <section class="product-img">
+              <div class="carrusel">
+              </div>
+                <div class="gallery-arrows mobile">
+                  <span class="gallery-arrow down "><img src="./images/icon-previous.svg" alt=""></span>
+                  <span class="gallery-arrow down gallery-arrow-orange"><img src="./images/icon-previous2.svg" alt=""></span>
+                  <span class="gallery-arrow up"><img src="./images/icon-next.svg" alt=""></span>
+                  <span class="gallery-arrow up gallery-arrow-orange"><img src="./images/icon-next2.svg" alt=""></span>
+              </div> 
+         </section>
+         <section class="product-info">
+           <div class="product-info-company"></div>
+              <h2 class="product-info-title"></h2>
+              <p class="product-info-description"></p>
+             <div class="product-info-pd">
+              <span class="product-info-price"></span>
+              <span class="product-info-discount"></span>
+             </div>
+             <div class="product-info-old-price"></div>
+             <div class="product-info-btns">
+               <div class="quantity">
+                 <span class="quantity-item btn less">-</span>
+                 <span class="quantity-item product">0</span>
+                 <span class="quantity-item btn plus">+</span>
+               </div>
+               <button class="product-info-btns-checkout orange"><img src="./images/icon-cart.svg" alt=""> Add to car</button>
+             </div>
+
+         </section>
+    </main>
+
+    <div class="gallery">
+      <div class="gallery-carrusel">
+        <div class="gallery-close"><img src="./images/icon-close.svg" alt=""></div>
+        <div class="product-img">
+          <div class="carrusel"></div>            
+        </div>
+        <div class="gallery-arrows">
+          <span class="gallery-arrow down "><img src="./images/icon-previous.svg" alt=""></span>
+          <span class="gallery-arrow down gallery-arrow-orange"><img src="./images/icon-previous2.svg" alt=""></span>
+          <span class="gallery-arrow up"><img src="./images/icon-next.svg" alt=""></span>
+          <span class="gallery-arrow up gallery-arrow-orange"><img src="./images/icon-next2.svg" alt=""></span>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="menu-mobile">
+       <div class="menu-mobile-background">
+         <div class="menu-mobile-close"><img src="./images/icon-close.svg" alt=""></div>
+         <div class="menu-mobile-item">Collections</div>
+         <div class="menu-mobile-item">Men</div>
+         <div class="menu-mobile-item">Women</div>
+         <div class="menu-mobile-item">About</div>
+         <div class="menu-mobile-item">Contact</div>
+       </div>
+    </div>
+
+  </div>
+  
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">theKINDbard</a>.
+  </div>
+</footer>
+
+  <script src="./script.js" type="module"></script>
+
+</body>
+</html>
