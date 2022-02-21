@@ -3,7 +3,7 @@ import  { CAR, CAR_INFO, CARRUCEL_CLOSE, GALLERY,  UP, DOWN, ACT_IMG, MAX_IMG, M
 
 let PRO_IMG, ALL_IMG;
 let product;
-let car = JSON.parse(localStorage["car"]) || []; 
+let car = JSON.parse(localStorage['car'] || '[]'); 
 
 const Q_ITEM = document.querySelector('.quantity-item.product');
 const Q_PLUS = document.querySelector('.quantity-item.plus');
